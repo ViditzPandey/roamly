@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roamly</title>
+</head>
+
+<body>
+    <h3>Lisitng Details :</h3>
+    <ul>
+        <li>
+            <%=idList.title%>
+        </li>
+        <li>
+            <%=idList.description%>
+        </li>
+        <li>
+            &#8377;<%=idList.price.toLocaleString("en-IN")%>
+        </li>
+        <li>
+            <%=idList.location%>
+        </li>
+        <li>
+            <%=idList.country%>
+        </li>
+    </ul>
+    <br>
+    <a href="/listings/<%=idList._id%>/edit">Edit This Listing</a>
+    <br>
+    <br>
+    <form method="post" action="/listings/<%=idList._id%>?_method=DELETE">
+        <button>Delete This Listing</button>
+    </form>
+</body>
+
+</html>
