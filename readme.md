@@ -246,7 +246,7 @@ If you'd like to improve Roamly, feel free to fork the repository, create a feat
 
 # 👨‍💻 Developer
 
-Developed with ❤️ by **Anurag** as part of the **#100DaysOfCode** challenge.
+Developed with ❤️ by **Vidit** as part of the **#100DaysOfCode** challenge.
 
 Building one project at a time while learning full-stack web development.
 
