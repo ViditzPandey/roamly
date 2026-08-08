@@ -306,7 +306,7 @@ If you want to improve Roamly:
 
 # 👨‍💻 Developer
 
-Developed with ❤️ by **Anurag** as part of the **#100DaysOfCode** challenge.
+Developed with ❤️ by **Vidit** as part of the **#100DaysOfCode** challenge.
 
 > Building one project at a time while learning full-stack web development.
 
