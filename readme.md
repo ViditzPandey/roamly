@@ -1,98 +1,159 @@
 # 🌍 Roamly
 
-Roamly is a full-stack travel accommodation listing platform inspired by Airbnb, where users can explore, create, edit, and manage travel listings. The project is built from scratch using the **MEN Stack (MongoDB, Express.js, Node.js)** with **EJS** for server-side rendering and **Bootstrap** for a responsive user interface.
+## ✨ About The Project
 
-This project is part of my **#100DaysOfCode** journey, where I build real-world projects while improving my full-stack development skills.
+Roamly is a **full-stack travel accommodation listing platform** where users can explore, create, edit, and manage travel listings.
+
+The project is built using the **MEN Stack**:
+
+- 🍃 **MongoDB**
+- ⚡ **Express.js**
+- 🟢 **Node.js**
+
+Frontend technologies used:
+
+- 🎨 **EJS** for server-side rendering
+- 💻 **HTML5 & CSS3**
+- 🎨 **Bootstrap 5** for responsive UI
+
+This project is part of my **🚀 #100DaysOfCode journey**, where I build real-world projects while improving my full-stack development skills.
 
 ---
 
 # ✨ Features
 
-### 🏠 Listing Management
+## 🏠 Listing Management
 
-* 📖 View all travel accommodation listings
-* ➕ Create new listings
-* ✏️ Edit existing listings
-* 🗑️ Delete listings
-* 👀 View complete details of each listing
+- 📖 View all travel accommodation listings
+- ➕ Create new listings
+- ✏️ Edit existing listings
+- 🗑️ Delete listings
+- 👀 View complete details of each listing
 
-### 🎨 User Interface
+---
 
-* Responsive Bootstrap layout
-* Modern listing cards
-* Attractive navbar with branding
-* Clean footer with social links
-* Beautiful forms for creating and editing listings
-* Responsive grid layout for listings
-* Hover effects on listing cards
-* Consistent styling using custom CSS
+## 🛡️ Validation & Error Handling
 
-### ⚡ Backend
+Implemented a complete validation and error-handling system:
 
-* RESTful routing
-* Express.js server
-* MongoDB integration with Mongoose
-* Dynamic EJS templating
-* Method Override for PUT & DELETE requests
-* Sample database seeding
+- ✅ Client-side form validation
+- ✅ Server-side schema validation using **Joi**
+- ✅ Validation middleware for routes
+- ✅ Custom `ExpressError` class
+- ✅ Centralized async error handling using `wrapAsync`
+- ✅ Custom Express error middleware
+- ✅ Dedicated error page (`error.ejs`)
+- ✅ Success & failure feedback messages
+- ✅ Cleaner and maintainable error management
+
+---
+
+## 🎨 User Interface
+
+- 📱 Responsive Bootstrap layout
+- 🏠 Modern listing cards
+- 🧭 Attractive navigation bar
+- 🔻 Clean footer with social links
+- 📝 Beautiful create & edit forms
+- 🖼️ Responsive grid layout
+- ✨ Hover effects on listing cards
+- 🎨 Custom CSS styling
+
+---
+
+## ⚡ Backend Features
+
+- 🔗 RESTful routing
+- 🚀 Express.js server
+- 🍃 MongoDB integration with Mongoose
+- 📄 Dynamic EJS templating
+- 🔄 Method Override for PUT & DELETE requests
+- 🌱 Database seeding
+- 🧩 Modular middleware architecture
 
 ---
 
 # 🚀 Current Progress
 
-### ✅ Completed
+## ✅ Completed Features
 
-* Express.js server setup
-* MongoDB connection
-* Mongoose Listing model
-* Complete CRUD functionality
-* Dynamic EJS rendering
-* RESTful routes
-* Bootstrap-based responsive UI
-* Home page with listing cards
-* Listing Details page
-* Create Listing page
-* Edit Listing page
-* Delete Listing functionality
-* Custom Navbar & Footer
-* Custom CSS styling
-* Database seeding with sample data
+### ⚡ Backend Development
+
+- ✅ Express.js server setup
+- ✅ MongoDB connection
+- ✅ Mongoose Listing model
+- ✅ Complete CRUD functionality
+- ✅ RESTful routes
+- ✅ Database seeding
+- ✅ MVC architecture implementation
+
+---
+
+### 🎨 Frontend Development
+
+- ✅ EJS templates
+- ✅ Bootstrap responsive UI
+- ✅ Home page with listing cards
+- ✅ Listing details page
+- ✅ Create listing page
+- ✅ Edit listing page
+- ✅ Delete listing functionality
+- ✅ Custom Navbar & Footer
+- ✅ Custom CSS styling
+
+---
+
+### 🛡️ Validation & Error Handling
+
+- ✅ Client-side form validation
+- ✅ Server-side schema validation using Joi
+- ✅ Validation middleware
+- ✅ Custom Express error class
+- ✅ Centralized async error handling (`wrapAsync`)
+- ✅ Dedicated error page (`error.ejs`)
+- ✅ Success & failure message handling
 
 ---
 
 # 🛠️ Tech Stack
 
-## Backend
+## 🔙 Backend
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
+- 🟢 Node.js
+- ⚡ Express.js
+- 🍃 MongoDB
+- 📦 Mongoose
+- ✅ Joi
 
-## Frontend
+---
 
-* EJS
-* HTML5
-* CSS3
-* Bootstrap 5
-* Font Awesome
-* Google Fonts (Plus Jakarta Sans)
+## 🎨 Frontend
 
-## Tools
+- 📄 EJS
+- 🌐 HTML5
+- 🎨 CSS3
+- 🖌️ Bootstrap 5
+- ⭐ Font Awesome
+- 🔤 Google Fonts (Plus Jakarta Sans)
 
-* Nodemon
-* Method Override
-* Git & GitHub
+---
+
+## 🧰 Tools
+
+- 🔥 Nodemon
+- 🔄 Method Override
+- 🐙 Git
+- 🐙 GitHub
+- 💻 VS Code
 
 ---
 
 # 📂 Project Structure
 
-```text
+```
 Roamly/
 │
 ├── init/
-│   ├── data.js
 │   └── index.js
 │
 ├── models/
@@ -100,23 +161,24 @@ Roamly/
 │
 ├── public/
 │   ├── css/
-│   │   └── style.css
-│   └── (other static assets)
+│   └── js/
+│
+├── utils/
+│   ├── wrapAsync.js
+│   └── ExpressErrors.js
 │
 ├── views/
-│   ├── layouts/
-│   │   └── boilerplate.ejs
-│   │
 │   ├── includes/
-│   │   ├── navbar.ejs
-│   │   └── footer.ejs
+│   ├── layouts/
+│   ├── listings/
+│   │   ├── index.ejs
+│   │   ├── show.ejs
+│   │   ├── new.ejs
+│   │   └── edit.ejs
 │   │
-│   └── listings/
-│       ├── index.ejs
-│       ├── new.ejs
-│       ├── show.ejs
-│       └── edit.ejs
+│   └── error.ejs
 │
+├── schema.js
 ├── app.js
 ├── package.json
 └── README.md
@@ -124,57 +186,61 @@ Roamly/
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Installation & Setup
 
-### 1. Clone the Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/roamly.git
 ```
 
-### 2. Navigate into the Project
+---
+
+## 2️⃣ Navigate Into Project
 
 ```bash
 cd roamly
 ```
 
-### 3. Install Dependencies
+---
+
+## 3️⃣ Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Start MongoDB
+---
 
-Make sure MongoDB is running locally.
+## 4️⃣ Start MongoDB
 
-Default database:
+Make sure MongoDB is running.
+
+Database:
 
 ```text
 mongodb://127.0.0.1:27017/roamly
 ```
 
-### 5. Seed the Database
+---
+
+## 5️⃣ Seed Database
 
 ```bash
 node init/index.js
 ```
 
-### 6. Run the Application
+---
 
-```bash
-node app.js
-```
-
-or
+## 6️⃣ Run Application
 
 ```bash
 nodemon app.js
 ```
 
-Open your browser and visit:
+Application will run at:
 
-```text
+```
 http://localhost:3000/listings
 ```
 
@@ -182,40 +248,25 @@ http://localhost:3000/listings
 
 # 📸 Screenshots
 
-### 🏠 Home Page
-
-> Displays all listings in a responsive card layout.
-
-### ➕ Create Listing
-
-> Add a new travel accommodation listing.
-
-### 👀 Listing Details
-
-> View detailed information about a selected listing.
-
-### ✏️ Edit Listing
-
-> Update an existing listing.
-
-*(Screenshots will be added soon.)*
+Screenshots and demo GIFs will be added as development progresses.
 
 ---
 
 # 🗺️ Upcoming Features
 
-* User Authentication (Login & Signup)
-* Authorization
-* Image Upload (Cloudinary)
-* Form Validation
-* Flash Messages
-* Reviews & Ratings
-* Search Functionality
-* Filters by Category
-* Booking System
-* Maps Integration
-* Responsive Mobile UI Improvements
-* Dark Mode
+Future improvements planned:
+
+- 🔐 User Authentication (Login & Signup)
+- 🛡️ Authorization
+- 💬 Flash Messages
+- ☁️ Image Upload with Cloudinary
+- ⭐ Reviews & Ratings
+- 🔍 Search Functionality
+- 🏷️ Filters
+- 🗺️ Maps Integration
+- 📅 Booking System
+- 📱 Responsive Mobile Improvements
+- 🌙 Dark Mode
 
 ---
 
@@ -223,16 +274,20 @@ http://localhost:3000/listings
 
 Through this project, I have learned:
 
-* Express.js routing
-* RESTful API design
-* CRUD operations
-* MongoDB & Mongoose
-* Server-side rendering with EJS
-* Bootstrap responsive layouts
-* MVC project structure
-* Dynamic templates
-* Database seeding
-* Git & GitHub workflow
+- 🚀 Express.js routing
+- 🏗️ MVC architecture
+- 🔄 CRUD operations
+- 🍃 MongoDB & Mongoose
+- 🔗 RESTful application design
+- 📄 EJS templating
+- 🎨 Bootstrap UI development
+- ✅ Joi schema validation
+- 🛡️ Client-side validation
+- 🧩 Express middleware
+- ⚡ Centralized async error handling
+- ❌ Custom error classes
+- 🐞 Error debugging
+- 🐙 Git & GitHub workflow
 
 ---
 
@@ -240,7 +295,12 @@ Through this project, I have learned:
 
 Contributions, suggestions, and feedback are always welcome.
 
-If you'd like to improve Roamly, feel free to fork the repository, create a feature branch, and submit a pull request.
+If you want to improve Roamly:
+
+1. 🍴 Fork the repository
+2. 🌿 Create a feature branch
+3. ✨ Make your changes
+4. 🚀 Submit a pull request
 
 ---
 
@@ -248,10 +308,12 @@ If you'd like to improve Roamly, feel free to fork the repository, create a feat
 
 Developed with ❤️ by **Vidit** as part of the **#100DaysOfCode** challenge.
 
-Building one project at a time while learning full-stack web development.
+> Building one project at a time while learning full-stack web development.
 
 ---
 
 # ⭐ Show Your Support
 
-If you like this project, consider giving it a **⭐ on GitHub**. Your support helps motivate me to continue building and improving Roamly.
+If you like this project, consider giving it a ⭐ on GitHub.
+
+Your support motivates me to keep learning, building, and improving Roamly 🚀
