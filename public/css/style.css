@@ -4,9 +4,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-.container{
+
+.container {
     flex: 1;
 }
+
 .navbar {
     height: 5rem;
     background-color: white;
@@ -57,7 +59,7 @@ body {
 }
 
 /* Cards */
-.card {
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
 }
@@ -90,28 +92,28 @@ body {
 }
 
 /* Add Page */
-.add-btn{
+.add-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
 /* Edit Page */
-.edit-btn{
+.edit-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
 /* Show Page */
-.show-img{
+.show-img {
     height: 30vh;
 }
 
-.btns{
+.btns {
     display: flex;
-    margin-bottom: 1.5rem !important;   
+    margin-bottom: 1.5rem !important;
 }
 
-.show-card{
+.show-card {
     padding-left: 0;
     padding-right: 0;
 }
