@@ -2,19 +2,19 @@
 
 ## ✨ About The Project
 
-Roamly is a **full-stack travel accommodation listing platform** where users can explore, create, edit, and manage travel listings.
+Roamly is a **full-stack travel accommodation listing platform** where users can explore, create, edit, and manage travel listings and share reviews and ratings.
 
 The project is built using the **MEN Stack**:
 
-- 🍃 **MongoDB**
-- ⚡ **Express.js**
-- 🟢 **Node.js**
+* 🍃 **MongoDB**
+* ⚡ **Express.js**
+* 🟢 **Node.js**
 
 Frontend technologies used:
 
-- 🎨 **EJS** for server-side rendering
-- 💻 **HTML5 & CSS3**
-- 🎨 **Bootstrap 5** for responsive UI
+* 🎨 **EJS** for server-side rendering
+* 💻 **HTML5 & CSS3**
+* 🎨 **Bootstrap 5** for responsive UI
 
 This project is part of my **🚀 #100DaysOfCode journey**, where I build real-world projects while improving my full-stack development skills.
 
@@ -24,94 +24,124 @@ This project is part of my **🚀 #100DaysOfCode journey**, where I build real-w
 
 ## 🏠 Listing Management
 
-- 📖 View all travel accommodation listings
-- ➕ Create new listings
-- ✏️ Edit existing listings
-- 🗑️ Delete listings
-- 👀 View complete details of each listing
+* 📖 View all travel accommodation listings
+* ➕ Create new listings
+* ✏️ Edit existing listings
+* 🗑️ Delete listings
+* 👀 View complete listing details
+* 🖼️ Listing image support
+* 💰 Display listing prices
+* 📍 Display location and country
+
+---
+
+## ⭐ Reviews & Ratings
+
+Roamly now includes a complete review system.
+
+* ⭐ Add ratings from 1–5
+* 💬 Add comments to listings
+* 📋 Display all reviews for a listing
+* 🗑️ Delete reviews
+* 🔗 Connect reviews with listings using MongoDB ObjectId references
+* 🔍 Populate reviews using Mongoose `populate()`
+* 🧹 Automatically delete associated reviews when a listing is deleted
+
+### Review Model
+
+Reviews are stored separately from listings and connected through references:
+
+```js
+reviews: [{
+    type: Schema.Types.ObjectId,
+    ref: "Review"
+}]
+```
+
+This provides a clean relationship between the `Listing` and `Review` collections.
 
 ---
 
 ## 🛡️ Validation & Error Handling
 
-Implemented a complete validation and error-handling system:
+Implemented a validation and error-handling system:
 
-- ✅ Client-side form validation
-- ✅ Server-side schema validation using **Joi**
-- ✅ Validation middleware for routes
-- ✅ Custom `ExpressError` class
-- ✅ Centralized async error handling using `wrapAsync`
-- ✅ Custom Express error middleware
-- ✅ Dedicated error page (`error.ejs`)
-- ✅ Success & failure feedback messages
-- ✅ Cleaner and maintainable error management
+* ✅ Client-side form validation
+* ✅ Server-side schema validation using **Joi**
+* ✅ Listing validation middleware
+* ✅ Review validation middleware
+* ✅ Custom `ExpressError` class
+* ✅ Centralized async error handling using `wrapAsync`
+* ✅ Custom Express error middleware
+* ✅ Dedicated error page (`error.ejs`)
 
 ---
 
 ## 🎨 User Interface
 
-- 📱 Responsive Bootstrap layout
-- 🏠 Modern listing cards
-- 🧭 Attractive navigation bar
-- 🔻 Clean footer with social links
-- 📝 Beautiful create & edit forms
-- 🖼️ Responsive grid layout
-- ✨ Hover effects on listing cards
-- 🎨 Custom CSS styling
-
----
-
-## ⚡ Backend Features
-
-- 🔗 RESTful routing
-- 🚀 Express.js server
-- 🍃 MongoDB integration with Mongoose
-- 📄 Dynamic EJS templating
-- 🔄 Method Override for PUT & DELETE requests
-- 🌱 Database seeding
-- 🧩 Modular middleware architecture
+* 📱 Responsive Bootstrap layout
+* 🏠 Listing cards
+* 🧭 Navigation bar
+* 🔻 Footer with social links
+* 📝 Create & edit forms
+* ⭐ Review submission form
+* 💬 Review cards
+* 🖼️ Responsive grid layout
+* ✨ Hover effects
+* 🎨 Custom CSS styling
 
 ---
 
 # 🚀 Current Progress
 
-## ✅ Completed Features
+## 📅 Day 40/100 — #100DaysOfCode
 
-### ⚡ Backend Development
+### ✅ Backend Development
 
-- ✅ Express.js server setup
-- ✅ MongoDB connection
-- ✅ Mongoose Listing model
-- ✅ Complete CRUD functionality
-- ✅ RESTful routes
-- ✅ Database seeding
-- ✅ MVC architecture implementation
-
----
-
-### 🎨 Frontend Development
-
-- ✅ EJS templates
-- ✅ Bootstrap responsive UI
-- ✅ Home page with listing cards
-- ✅ Listing details page
-- ✅ Create listing page
-- ✅ Edit listing page
-- ✅ Delete listing functionality
-- ✅ Custom Navbar & Footer
-- ✅ Custom CSS styling
+* ✅ Express.js server setup
+* ✅ MongoDB connection
+* ✅ Mongoose Listing model
+* ✅ Mongoose Review model
+* ✅ Complete Listing CRUD functionality
+* ✅ Review creation
+* ✅ Review deletion
+* ✅ Listing–Review relationship
+* ✅ Mongoose `populate()`
+* ✅ Automatic review cleanup when deleting listings
+* ✅ RESTful routes
+* ✅ Database seeding
+* ✅ MVC architecture
 
 ---
 
-### 🛡️ Validation & Error Handling
+### ✅ Frontend Development
 
-- ✅ Client-side form validation
-- ✅ Server-side schema validation using Joi
-- ✅ Validation middleware
-- ✅ Custom Express error class
-- ✅ Centralized async error handling (`wrapAsync`)
-- ✅ Dedicated error page (`error.ejs`)
-- ✅ Success & failure message handling
+* ✅ EJS templates
+* ✅ Bootstrap responsive UI
+* ✅ Home page with listing cards
+* ✅ Listing details page
+* ✅ Create listing page
+* ✅ Edit listing page
+* ✅ Delete listing functionality
+* ✅ Custom Navbar & Footer
+* ✅ Custom CSS styling
+* ✅ Leave a Review form
+* ✅ Reviews display section
+* ✅ Review delete button
+
+---
+
+### ✅ Validation & Error Handling
+
+* ✅ Client-side form validation
+* ✅ Server-side validation using Joi
+* ✅ Listing validation middleware
+* ✅ Review validation middleware
+* ✅ Custom Express error class
+* ✅ Centralized async error handling
+* ✅ `wrapAsync` utility
+* ✅ Dedicated error page
+* ✅ 404 handling
 
 ---
 
@@ -119,45 +149,46 @@ Implemented a complete validation and error-handling system:
 
 ## 🔙 Backend
 
-- 🟢 Node.js
-- ⚡ Express.js
-- 🍃 MongoDB
-- 📦 Mongoose
-- ✅ Joi
+* 🟢 Node.js
+* ⚡ Express.js
+* 🍃 MongoDB
+* 📦 Mongoose
+* ✅ Joi
 
 ---
 
 ## 🎨 Frontend
 
-- 📄 EJS
-- 🌐 HTML5
-- 🎨 CSS3
-- 🖌️ Bootstrap 5
-- ⭐ Font Awesome
-- 🔤 Google Fonts (Plus Jakarta Sans)
+* 📄 EJS
+* 🌐 HTML5
+* 🎨 CSS3
+* 🖌️ Bootstrap 5
+* ⭐ Font Awesome
+* 🔤 Google Fonts — Plus Jakarta Sans
 
 ---
 
 ## 🧰 Tools
 
-- 🔥 Nodemon
-- 🔄 Method Override
-- 🐙 Git
-- 🐙 GitHub
-- 💻 VS Code
+* 🔥 Nodemon
+* 🔄 Method Override
+* 🐙 Git
+* 🐙 GitHub
+* 💻 VS Code
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 Roamly/
 │
 ├── init/
 │   └── index.js
 │
 ├── models/
-│   └── listing.js
+│   ├── listing.js
+│   └── review.js
 │
 ├── public/
 │   ├── css/
@@ -182,6 +213,36 @@ Roamly/
 ├── app.js
 ├── package.json
 └── README.md
+```
+
+---
+
+# 🔗 Review Routes
+
+Roamly currently supports the following review operations:
+
+### Create Review
+
+```text
+POST /listings/:id/reviews
+```
+
+### Delete Review
+
+```text
+DELETE /listings/:id/reviews/:reviewId
+```
+
+### View Listing With Reviews
+
+```text
+GET /listings/:id
+```
+
+Reviews are populated using:
+
+```js
+Listing.findById(id).populate("reviews");
 ```
 
 ---
@@ -240,7 +301,7 @@ nodemon app.js
 
 Application will run at:
 
-```
+```text
 http://localhost:3000/listings
 ```
 
@@ -256,17 +317,18 @@ Screenshots and demo GIFs will be added as development progresses.
 
 Future improvements planned:
 
-- 🔐 User Authentication (Login & Signup)
-- 🛡️ Authorization
-- 💬 Flash Messages
-- ☁️ Image Upload with Cloudinary
-- ⭐ Reviews & Ratings
-- 🔍 Search Functionality
-- 🏷️ Filters
-- 🗺️ Maps Integration
-- 📅 Booking System
-- 📱 Responsive Mobile Improvements
-- 🌙 Dark Mode
+* 🔐 User Authentication — Login & Signup
+* 🛡️ Authorization
+* 👤 User accounts
+* 🏷️ User-specific reviews
+* 💬 Flash Messages
+* ☁️ Image Upload with Cloudinary
+* 🔍 Search Functionality
+* 🏷️ Filters
+* 🗺️ Maps Integration
+* 📅 Booking System
+* 📱 Responsive mobile improvements
+* 🌙 Dark Mode
 
 ---
 
@@ -274,20 +336,42 @@ Future improvements planned:
 
 Through this project, I have learned:
 
-- 🚀 Express.js routing
-- 🏗️ MVC architecture
-- 🔄 CRUD operations
-- 🍃 MongoDB & Mongoose
-- 🔗 RESTful application design
-- 📄 EJS templating
-- 🎨 Bootstrap UI development
-- ✅ Joi schema validation
-- 🛡️ Client-side validation
-- 🧩 Express middleware
-- ⚡ Centralized async error handling
-- ❌ Custom error classes
-- 🐞 Error debugging
-- 🐙 Git & GitHub workflow
+* 🚀 Express.js routing
+* 🏗️ MVC architecture
+* 🔄 CRUD operations
+* 🍃 MongoDB & Mongoose
+* 🔗 MongoDB document relationships
+* 🔍 Mongoose `populate()`
+* 🧹 Middleware for cascading document cleanup
+* 🔗 RESTful application design
+* 📄 EJS templating
+* 🎨 Bootstrap UI development
+* ⭐ Review & rating implementation
+* ✅ Joi schema validation
+* 🛡️ Client-side validation
+* 🧩 Express middleware
+* ⚡ Centralized async error handling
+* ❌ Custom error classes
+* 🐞 Error debugging
+* 🐙 Git & GitHub workflow
+
+---
+
+# 📈 100 Days of Code Progress
+
+## 🔥 Day 40/100
+
+**Current milestone:** Reviews & Ratings implemented ⭐
+
+### Progress
+
+```text
+████████████████░░░░░░░░░░░░░░░░░░░░░░ 40%
+```
+
+**40 days completed — 60 days remaining.**
+
+The goal is to continue transforming Roamly into a complete, production-style travel accommodation platform while strengthening full-stack development skills.
 
 ---
 
@@ -314,6 +398,6 @@ Developed with ❤️ by **Vidit** as part of the **#100DaysOfCode** challenge.
 
 # ⭐ Show Your Support
 
-If you like this project, consider giving it a **⭐ on GitHub**. Your support helps motivate me to continue building and improving Roamly.
+If you like this project, consider giving it a **⭐ on GitHub**.
 
 Your support motivates me to keep learning, building, and improving Roamly 🚀
