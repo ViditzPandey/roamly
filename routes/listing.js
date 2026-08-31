@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/ExpressErrors.js");
-const { listingSchema, reviewSchema } = require("../schema.js");
+const { listingSchema } = require("../schema.js");
 const Listing = require("../models/listing.js");
 
 const validateListing = (req, res, next) => {
@@ -13,7 +13,7 @@ const validateListing = (req, res, next) => {
     } else {
         next();
     }
-}
+};
 
 // Index Route
 router.get("/", wrapAsync(async (req, res) => {
@@ -63,6 +63,5 @@ router.delete("/:id", wrapAsync(async (req, res) => {
     await Listing.findByIdAndDelete(id);
     res.redirect("/listings");
 }));
-
 
 module.exports = router;
