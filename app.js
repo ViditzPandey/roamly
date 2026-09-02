@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressErrors.js");
+const session = require("express-session");
 
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
@@ -28,6 +29,14 @@ main().then(() => {
 }).catch((err) => {
     console.log(err);
 });
+
+const sessionOptions = {
+    secret: "mysecretcode",
+    resave: false,
+    saveUninitialized: true
+}
+
+app.use(session(sessionOptions));
 
 app.listen(3000, (req, res) => {
     console.log("App listening on port :- 3000");

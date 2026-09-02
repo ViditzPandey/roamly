@@ -10,8 +10,10 @@ const listingSchema = new Schema({
     description: String,
     image: {
         type: String,
-        default: "https://unsplash.com/photos/a-house-on-the-beach-with-palm-trees-in-the-background-0uq8ZY9jyQo",
-        set: (v) => v === "" ? "https://unsplash.com/photos/a-house-on-the-beach-with-palm-trees-in-the-background-0uq8ZY9jyQo" : v
+        default: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800",
+        set: (v) => v === ""
+            ? "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+            : v
     },
     price: Number,
     location: String,
