@@ -30,7 +30,7 @@ router.get("/new", (req, res) => {
 router.get("/:id/edit", wrapAsync(async (req, res) => {
     let { id } = req.params;
     let listing = await Listing.findById(id);
-    if(!idList){
+    if(!listing){
         req.flash("error","Listing does not exist");
        return res.redirect("/listings");
     }
