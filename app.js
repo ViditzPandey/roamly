@@ -66,14 +66,14 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get("/demoUser",async(req,res)=>{
-    let fakeUser= new User({
-        email:"student1234@gmail.com",
-        username:"vidit-pandey"
-    });
-    let registeredUser= await User.register(fakeUser,"helloworld");
-    res.send(registeredUser);
-});
+// app.get("/demoUser",async(req,res)=>{
+//     let fakeUser= new User({
+//         email:"student1234@gmail.com",
+//         username:"vidit-pandey"
+//     });
+//     let registeredUser= await User.register(fakeUser,"helloworld");
+//     res.send(registeredUser);
+// });
 
 app.listen(3000, (req, res) => {
     console.log("App listening on port :- 3000");
