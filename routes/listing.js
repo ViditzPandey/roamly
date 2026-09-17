@@ -29,7 +29,8 @@ router.get("/:id/edit",isLoggedIn,isOwner, wrapAsync(async (req, res) => {
 // Show Route
 router.get("/:id", wrapAsync(async (req, res) => {
     let { id } = req.params;
-    const idList = await Listing.findById(id).populate("reviews").populate("owner");
+    const idList = await Listing.findById(id).populate({path:"reviews", populate:{ path: "author",},
+    }).populate("owner");
     // console.log(id);
     if(!idList){
         req.flash("error","Listing does not exist");
