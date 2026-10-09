@@ -1,8 +1,6 @@
-let mapToken = mapToken;
-console.log(mapToken);
 const map = new mapboxgl.Map({
     accessToken: mapToken,
     container: 'map',
-    center: [-71.06776, 42.35816],
+    center: [77.2300, 28.6100],
     zoom: 9
 });
