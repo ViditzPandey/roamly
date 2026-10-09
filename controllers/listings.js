@@ -25,9 +25,9 @@ module.exports.showListings=async (req, res) => {
     res.render("listings/show.ejs", { idList });
 }
 
-module.exports.createListing=async (req, res, next) => {
+module.exports.createListing=async (req, res, next) =>{
   let response= await geocodingClient.forwardGeocode({
-  query: 'New Delhi , India',
+  query: req.body.listing.location,
   limit: 1
 })
   .send()
